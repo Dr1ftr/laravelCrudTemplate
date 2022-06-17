@@ -1,0 +1,42 @@
+@startuml Userroles
+!include style.wsd
+
+actor "Student" as student
+actor "Super User" as sUser
+actor "Warehouse Manager" as financialM
+actor "Financial Manager" as warehouseM
+
+rectangle Magazijn {
+    usecase "Artikelen aanvragen" as aAanvragen
+    usecase "Artikelen uitlenen" as aUitlenen
+    usecase "Artikelen innemen" as aInnemen
+    usecase "Artikelen bestellen" as aBestellen
+    usecase "Artikelen beheren" as aBeheren
+
+    usecase "Bestellingen goed-/foutkeuren" as bestellingBeheer
+    usecase "Magazijn inzien" as inzien
+
+    usecase "Gebruikers aanmaken" as gAanmaken
+    usecase "Gebruikers verwijderen" as gVerwijderen
+    usecase "Gebruikers aanpassen" as gAanpassen
+}
+
+student --> aAanvragen
+
+sUser --> bestellingBeheer
+sUser --> aBestellen
+sUser --> aAanvragen
+sUser --> inzien
+sUser --> gAanmaken
+sUser --> gVerwijderen
+sUser --> gAanpassen
+
+(aInnemen) <-- warehouseM
+(aUitlenen) <-- warehouseM
+(inzien) <-- warehouseM
+(aBeheren) <-- warehouseM
+
+(inzien) <-- financialM
+(bestellingBeheer) <-- financialM
+
+@enduml

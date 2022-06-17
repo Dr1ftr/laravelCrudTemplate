@@ -1,0 +1,24 @@
+@tailwind components;
+
+/*
+|-----------------------------------------------------------------------------
+| Styling for the background and navbar, only for on the dashboard
+|-----------------------------------------------------------------------------
+*/
+
+body>* { /* give every element directly in the body the blue osiris background */
+    /* only change the background image to the blue one */
+    background-image: url('/img/osiris-background.png');
+}
+
+/* mobile navbar styling */
+/* ( with element type specified, so it's more specific than the default style ) */
+div.responsive-nav-menu { /* responsive nav menu for mobile users */
+    @apply bg-mbou-blue-600;
+}
+
+button.nav-hamburger { /* responsive button to open/close the responsive nav menu */
+    /* interaction visuals */
+    @apply hover:text-black hover:bg-mbou-blue-400;
+    @apply focus:text-black focus:bg-mbou-blue-400;
+}

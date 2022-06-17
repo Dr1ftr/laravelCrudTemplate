@@ -1,0 +1,173 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Laravel: serve",
+            "type": "shell",
+            "command": "\"run server.bat\"",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: run specific test",
+            "type": "shell",
+            "command": "php artisan test --filter ${input:getTest}",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: test",
+            "type": "shell",
+            "command": "php artisan test --stop-on-failure",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: migrate and seed database",
+            "type": "shell",
+            "command": "php artisan migrate:fresh --seed",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: run specific seeder",
+            "type": "shell",
+            "command": "php artisan db:seed --class=${input:getSeeder}",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: run all seeders",
+            "type": "shell",
+            "command": "php artisan db:seed --class=FullSeeder",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Webpack mix: compile assets",
+            "type": "shell",
+            "command": "npm run dev",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Webpack mix: watch asset changes",
+            "type": "shell",
+            "command": "npm run watch",
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+
+
+        {
+            "label": "Refresh: assets and database",
+            "type": "shell",
+            "command": [
+                "php artisan migrate:fresh &&", // refresh database structure
+                "npm run dev &&", // compile assets (js/css)
+                "php artisan test --stop-on-failure &&", // run tests
+                "php artisan migrate:fresh --seed &&", // refresh database again (because it gets dirty after testing) and seed it this time
+                "\"run server.bat\"" // start localhost
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Refresh: libraries",
+            "type": "shell",
+            "command": [
+                "echo Composer: &&",
+                "composer install &&", // install php dependencies
+                "echo Node: &&",
+                "npm install" // install node dependencies
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+
+
+        {
+            "label": "IDE helper: generate laravel helpers",
+            "type": "shell",
+            "command": "php artisan ide-helper:generate",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "IDE helper: generate model helpers",
+            "type": "shell",
+            "command": "php artisan ide-helper:models",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ],
+
+
+    "inputs": [
+        {
+            "id": "getSeeder",
+            "description": "What seeder would you like to run?",
+            "default": "FullSeeder",
+            "type": "promptString"
+        },
+        {
+            "id": "getTest",
+            "description": "What test would you like to run?",
+            "default": "ExampleTest",
+            "type": "promptString"
+        }
+    ]
+}

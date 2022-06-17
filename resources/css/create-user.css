@@ -1,0 +1,24 @@
+@tailwind components;
+
+/*
+|-----------------------------------------------------------------------------
+| Styling for the choices.js role chooser on user.create
+|-----------------------------------------------------------------------------
+*/
+
+.choices {
+    @apply rounded-md shadow
+}
+
+.choices__inner {
+    @apply bg-white rounded-md shadow-md overflow-hidden border-gray-300
+}
+
+input.choices__input {
+    @apply bg-transparent ring-0
+}
+
+/* only make the choices for the roles be blue blocks */
+[data-type=select-multiple] .choices__inner .choices__list .choices__item {
+    @apply bg-mbou-blue rounded-md
+}

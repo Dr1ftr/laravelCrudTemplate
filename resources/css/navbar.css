@@ -1,0 +1,30 @@
+@tailwind components;
+
+/*
+|-----------------------------------------------------------------------------
+| Styling for the navbar for every page
+|-----------------------------------------------------------------------------
+*/
+
+.responsive-nav-menu { /* responsive nav menu for mobile users */
+    /* position and sizing */
+    @apply absolute z-30 w-full -mt-2 pt-2;
+
+    /* visuals */
+    background-color: #E4E4E4;
+    @apply shadow-lg;
+}
+
+.nav-hamburger { /* responsive button to open/close the responsive nav menu */
+    /* position and sizing */
+    @apply inline-flex items-center justify-center p-2;
+    
+    /* visuals */
+        /* general */
+    @apply rounded-md text-gray-900 transition;
+        /* interaction */
+    @apply hover:text-black hover:bg-gray-200;
+    @apply focus:text-black focus:bg-gray-300 focus:outline-none;
+}
+
+/* bg-mbou-blue-600 */

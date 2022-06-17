@@ -1,0 +1,79 @@
+.table-requests {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+}
+.table-requests thead tr {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+}
+.table-requests th,
+.table-requests td {
+    padding: 12px 15px;
+}
+
+.table-requests tbody tr:nth-of-type(even) {
+    background-color: rgba(243, 243, 243, .1);
+}
+
+.table-requests tbody tr:last-of-type {
+    border-bottom: 2px solid #000000;
+}
+body>* {
+    background-image: url('/img/osiris-background.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+nav[role=navigation]:last-child {
+    flex-direction: column;
+}
+p.text-sm {
+    display: none;
+}
+
+.button {
+    background-color: rgb(0, 255, 72);
+    color: black;
+    border: 2px solid #000000;
+    background-image: linear-gradient(to right, #1fff32 0%, #0cd64c  51%, #04bb38  100%);
+    padding: .125rem;
+}
+
+.button2 {
+    background-color: rgb(255, 3, 3);
+    color: black;
+    border: 2px solid #000000;
+    background-image: linear-gradient(to right, #ff2e1f 0%, #cf1818  51%, #de3535  100%);
+    width:100%;
+    padding: .125rem;
+}
+.button3 {
+    background-color: rgb(255, 3, 238);
+    color: black;
+    border: 2px solid #000000;
+    background-image: linear-gradient(to right, #e50cc8 0%, #e600ff  51%, #ae0977  100%);
+    width:100%;
+    padding: .125rem;
+}
+.button:hover{
+    background-position: right center;
+    color: #fff;
+}
+.button2:hover{
+    background-position: right center;
+    color: #fff;
+}
+.button3:hover{
+    background-position: right center;
+    color: #fff;
+}
+.button2:hover{
+    background-position: right center;
+    color: #fff;
+}

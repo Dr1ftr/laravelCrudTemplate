@@ -1,0 +1,51 @@
+{
+    "The :attribute must contain at least one letter.": "Het :attribute moet tenminste één letter hebben.",
+    "The :attribute must contain at least one number.": "Het :attribute moet tenminste één nummer hebben.",
+    "The :attribute must contain at least one symbol.": "Het :attribute moet tenminste één symbool hebben.",
+    "The :attribute must contain at least one uppercase and one lowercase letter.": "Het :attribute moet tenminste één hoofdletter en één kleine letter hebben.",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": "Het opgegeven :attribute is gezien in een data leak. Kies alstublieft een andere :attribute.",
+
+    "Home": "Home",
+    "Create User": "Creëer gebruiker",
+
+    "Firstname": "Voornaam",
+    "Infix": "Tussenvoegsel",
+    "Lastname": "Achternaam",
+    "Email": "E-mail",
+    "Roles": "Rollen",
+    "Academy": "Academie",
+
+    "Create an user": "Maak een gebruiker",
+    "Create": "Creëer",
+    "Succesfully created user.": "Gebruiker succesvol aangemaakt.",
+
+    "Welcome :name": "Welkom :name",
+    "Password": "Wachtwoord",
+    "Repeat password": "Herhaal wachtwoord",
+    "Activate": "Activeer",
+    "Your account has been succesfully activated. You can now log in.": "Uw account is succesvol geactiveerd. U kan nu inloggen.",
+
+    "Loans": "Leningen",
+    "Loan Requests": "Leningaanvragen",
+
+    "Accept": "Accepteer",
+    "Reject": "Weiger",
+    "Take in": "Neem in",
+    "Details": "Details",
+
+    "Name": "Naam",
+    "Date: lent out": "Datum: uitgeleend",
+    "Date: to return": "Datum: terugkeer",
+    "Date: start": "Datum: begin",
+    "Date: end": "Datum: einde",
+    "Amount": "Aantal",
+    "Take in loan?": "Lening terugnemen?",
+    "Accept loan request?": "Accepteer lening?",
+
+    ":seconds second(s)": ":seconds seconde(n)",
+    ":minutes minute(s)": ":minutes minuut(en)",
+    ":hours hour(s)": ":hours uur(en)",
+    ":days day(s)": ":days dag(en)",
+    ":months month(s)": ":months maand(en)",
+    ":years year(s)": ":years jaar(en)"
+}

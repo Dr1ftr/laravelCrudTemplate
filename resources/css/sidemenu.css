@@ -1,0 +1,56 @@
+@tailwind components;
+
+/*
+|-----------------------------------------------------------------------------
+| Styling for the sidemenu for on every page
+|-----------------------------------------------------------------------------
+*/
+
+body>* { /* give every element directly in the body the osiris background */
+    background-image: url('/img/osiris-background-gray.png');
+    @apply bg-cover bg-repeat-y;
+}
+
+.sidemenu {
+    /* positioning and sizing */
+    @apply block h-full fixed z-30 w-16 max-w-full;
+
+    /* visuals */
+    @apply text-gray-400 bg-opacity-80 bg-black backdrop-blur-sm rounded overflow-hidden duration-300 transition-width;
+}
+.sidemenu.open {
+    @apply w-96;
+}
+
+.sidemenu-content {
+    /* positioning and sizing */
+    @apply flex flex-col items-center w-16;
+}
+
+.sidemenu-item {
+    /* general styling */
+        /* positioning */
+    @apply relative flex items-center content-center justify-center w-12 h-12 mt-2;
+        /* visuals */
+    @apply fill-gray-400 bg-slate-500 bg-opacity-0 transition duration-200 rounded-md;
+
+    /* hover/active (onclick) styling */
+    @apply  hover:opacity-75  hover:bg-opacity-10;
+    @apply active:opacity-60 active:bg-opacity-30;
+}
+.sidemenu-item.highlighted { /* styling for a sidemenu-item if it's the current page */
+    @apply fill-gray-300;
+}
+
+.sidemenu-item > p {
+    @apply block absolute ml-16 w-80 /* 96 - 16 = 80 */ left-0 max-w-screen-sm;
+}
+
+.sidemenu-group { /* for grouping sidemenu-items together (lines appear between groups) */
+    /* positioning */
+    @apply flex flex-col items-center mt-2;
+
+    /* line between groups */
+    @apply border-t border-gray-700;
+}
+

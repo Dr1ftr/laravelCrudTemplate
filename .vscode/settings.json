@@ -1,0 +1,43 @@
+// workspace settings
+{
+    "files.exclude": {
+        // default
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+
+        // folders
+        ".vscode/": true,
+        "vendor/": true,
+        "node_modules": true,
+
+        // files starting with .
+        ".editorconfig": true,
+        ".env": true,
+        ".env.example": true,
+        ".gitignore": true,
+        ".gitattributes": true,
+        ".styleci.yml": true,
+        ".phpunit.result.cache": true,
+
+        // files that won't be edited very often
+        "artisan": true,
+        "composer.json": true,
+        "composer.lock": true,
+        "package.json": true,
+        "phpunit.xml": true,
+        "README.md": true,
+        "*.bat": true,
+        "package-lock.json": true,
+        "tsconfig.json": true,
+        "tailwind.config.js": false,
+
+        // generated files
+        "_ide_helper.php": true,
+        "_ide_helper_models.php": true,
+        ".phpstorm.meta.php": true
+    }
+}

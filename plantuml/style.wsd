@@ -1,0 +1,7 @@
+@startuml Styling
+left to right direction
+
+skinparam packageStyle rectangle
+skinparam handwritten true
+skinparam defaultFontName Comic Sans MS
+@enduml

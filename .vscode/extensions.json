@@ -1,0 +1,29 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		// laravel
+		"cjhowe7.laravel-blade",
+		"onecentlin.laravel5-snippets",
+		"onecentlin.laravel-blade",
+
+		// postcss
+		"csstools.postcss",
+		// tailwind
+		"bradlc.vscode-tailwindcss",
+
+		// plantuml
+		"jebbs.plantuml",
+		"joaompinto.vscode-graphviz",
+		"tintinweb.graphviz-interactive-preview",
+
+		// formatting
+		"oderwat.indent-rainbow",
+		"DmitryDorofeev.empty-indent"
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+	]
+}

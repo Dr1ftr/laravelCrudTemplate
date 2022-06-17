@@ -1,0 +1,51 @@
+{
+    "The :attribute must contain at least one letter.": "The :attribute must contain at least one letter.",
+    "The :attribute must contain at least one number.": "The :attribute must contain at least one number.",
+    "The :attribute must contain at least one symbol.": "The :attribute must contain at least one symbol.",
+    "The :attribute must contain at least one uppercase and one lowercase letter.": "The :attribute must contain at least one uppercase and one lowercase letter.",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": "The given :attribute has appeared in a data leak. Please choose a different :attribute.",
+
+    "Home": "Home",
+    "Create User": "Create user",
+
+    "Firstname": "Firstname",
+    "Infix": "Infix",
+    "Lastname": "Lastname",
+    "Email": "Email",
+    "Roles": "Roles",
+    "Academy": "Academy",
+
+    "Create an user": "Create an user",
+    "Create": "Create",
+    "Succesfully created user.": "Succesfully created user.",
+
+    "Welcome :name": "Welcome :name",
+    "Password": "Password",
+    "Repeat password": "Repeat password",
+    "Activate": "Activate",
+    "Your account has been succesfully activated. You can now log in.": "Your account has been succesfully activated. You can now log in.",
+
+    "Loans": "Loans",
+    "Loan Requests": "Loan Requests",
+
+    "Accept": "Accept",
+    "Reject": "Reject",
+    "Take in": "Take in",
+    "Details": "Details",
+
+    "Name": "Name",
+    "Date: lent out": "Date: lent out",
+    "Date: to return": "Date: to return",
+    "Date: start": "Date: start",
+    "Date: end": "Date: end",
+    "Amount": "Amount",
+    "Take in loan?": "Take in loan?",
+    "Accept loan request?": "Accept loan request?",
+
+    ":seconds second(s)": ":seconds second(s)",
+    ":minutes minute(s)": ":minutes minute(s)",
+    ":hours hour(s)": ":hours hour(s)",
+    ":days day(s)": ":days day(s)",
+    ":months month(s)": ":months month(s)",
+    ":years year(s)": ":years year(s)"
+}
