@@ -6,9 +6,13 @@ use App\Models\Article;
 use App\Models\Loan;
 use App\Models\Academy;
 use App\Models\Warehouse;
+use App\Models\User;
+use App\Mail\LoanTakenInMailable;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 use Auth;
 
-use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
@@ -21,7 +25,7 @@ class ArticlesController extends Controller
             for ($i=0; $i < count($academyWarehouses); $i++) { 
                 array_push($whIdArray, $academyWarehouses[$i]['id']);
             }
-            $articles = Article::all()->whereIn('warehouse_id', $whIdArray);
+            $articles = Article::all()->whereIn('warehouse_id', $whIdArray)->paginate(7);
 
         } else {
             $articles = Article::all();
@@ -29,18 +33,27 @@ class ArticlesController extends Controller
         
         //Create dummy dates for the articles 
         $lastKey = $articles->keys()->last() + 1;
-        for ($i=0; $i < $lastKey; $i++) { 
+        for ($i=0; $i < $lastKey; $i++) {
+
+            // Checks if the array key is associated with an entry.
             if (Arr::exists($articles, $i)) {
                 $articles[$i]->created_at = date_create($articles[$i]->created_at);
-                //Pulls the amount of the product that is lent out
+                // Pulls all the loan rows associated with the product
                 $loans = Loan::all()->where('article_id', $articles[$i]->id);
+                // Check if the article has any running loan
                 if ($loans->isNotEmpty()) {
+                    //Calculates how many of the article are being loaned.
                     foreach ($loans as $arr) {
                         $articles[$i]->lent_out = $articles[$i]->lent_out + $arr->amount;
                     }
                     
+                } else {
+                    // Article doesn't have any loans, continue
                 }
+
                 $articles[$i]->academy_name = $articles[$i]->warehouse->name;
+            } else {
+                // Array key is empty, continue
             }
         }  
 
